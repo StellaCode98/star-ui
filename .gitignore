@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.local
+
+# VuePress 构建产物与缓存
+packages/docs/.vuepress/dist/
+packages/docs/.vuepress/.cache/
+packages/docs/.vuepress/.temp/
+
+.DS_Store
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

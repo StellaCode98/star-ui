@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#g)" d="M64 8l13.7 27.7L108 41 86 62l5.3 30.3L64 78 36.7 92.3 42 62 20 41l30.3-5.3z"/>
+  <text x="64" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#4f46e5">StarUI</text>
+</svg>

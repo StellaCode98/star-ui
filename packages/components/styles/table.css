@@ -1,0 +1,103 @@
+.st-table {
+  position: relative;
+  width: 100%;
+  font-size: var(--st-font-size-md, 14px);
+  color: var(--st-color-text, #1f2937);
+}
+
+.st-table.is-bordered {
+  border: 1px solid var(--st-color-border, #e5e7eb);
+  border-radius: var(--st-border-radius, 6px);
+  overflow: hidden;
+}
+
+.st-table__scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.st-table__inner {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.st-table__inner th,
+.st-table__inner td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--st-color-border, #e5e7eb);
+  text-align: left;
+}
+
+.st-table.is-bordered .st-table__inner th,
+.st-table.is-bordered .st-table__inner td {
+  border-right: 1px solid var(--st-color-border, #e5e7eb);
+}
+
+.st-table.is-bordered .st-table__inner th:last-child,
+.st-table.is-bordered .st-table__inner td:last-child {
+  border-right: none;
+}
+
+.st-table__inner th {
+  font-weight: 600;
+  color: var(--st-color-text, #1f2937);
+  background: var(--st-color-fill, #f3f4f6);
+  white-space: nowrap;
+}
+
+.st-table__inner tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.st-table__inner tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.st-table__inner tbody tr:hover {
+  background: rgba(79, 70, 229, 0.04);
+}
+
+.st-table__inner tr.is-striped {
+  background: rgba(243, 244, 246, 0.6);
+}
+
+.st-table__inner td.is-align-center,
+.st-table__inner th.is-align-center {
+  text-align: center;
+}
+
+.st-table__inner td.is-align-right,
+.st-table__inner th.is-align-right {
+  text-align: right;
+}
+
+.st-table__empty {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--st-color-text-secondary, #6b7280);
+}
+
+.st-table__loading {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--st-spacing-sm, 8px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  color: var(--st-color-primary, #4f46e5);
+}
+
+.st-table__spinner {
+  width: 18px;
+  height: 18px;
+  animation: st-table-rotate 0.8s linear infinite;
+}
+
+@keyframes st-table-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

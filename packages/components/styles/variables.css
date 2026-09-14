@@ -1,0 +1,27 @@
+/* StarUI 设计变量：主题定制入口 */
+:root {
+  --st-color-primary: #4f46e5;
+  --st-color-primary-hover: #6366f1;
+  --st-color-primary-active: #4338ca;
+  --st-color-success: #16a34a;
+  --st-color-warning: #d97706;
+  --st-color-danger: #dc2626;
+  --st-color-info: #6b7280;
+  --st-color-text: #1f2937;
+  --st-color-text-secondary: #6b7280;
+  --st-color-border: #e5e7eb;
+  --st-color-fill: #f3f4f6;
+  --st-color-white: #fff;
+  --st-border-radius: 6px;
+  --st-border-radius-round: 999px;
+  --st-font-size-sm: 12px;
+  --st-font-size-md: 14px;
+  --st-font-size-lg: 16px;
+  --st-spacing-xs: 4px;
+  --st-spacing-sm: 8px;
+  --st-spacing-md: 12px;
+  --st-spacing-lg: 16px;
+  --st-shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06);
+  --st-shadow-md: 0 4px 12px rgba(17, 24, 39, 0.1);
+  --st-shadow-lg: 0 12px 32px rgba(17, 24, 39, 0.16);
+}

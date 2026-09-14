@@ -1,0 +1,181 @@
+.st-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--st-spacing-xs);
+  border: 1px solid transparent;
+  border-radius: var(--st-border-radius);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.st-button:focus-visible {
+  outline: 2px solid var(--st-color-primary);
+  outline-offset: 2px;
+}
+
+/* 尺寸 */
+.st-button--large {
+  height: 40px;
+  padding: 0 18px;
+  font-size: var(--st-font-size-lg);
+}
+
+.st-button--medium {
+  height: 34px;
+  padding: 0 15px;
+  font-size: var(--st-font-size-md);
+}
+
+.st-button--small {
+  height: 28px;
+  padding: 0 11px;
+  font-size: var(--st-font-size-sm);
+}
+
+/* 类型 */
+.st-button--primary {
+  background: var(--st-color-primary);
+  color: var(--st-color-white);
+}
+
+.st-button--primary:hover:not(.is-disabled) {
+  background: var(--st-color-primary-hover);
+}
+
+.st-button--primary:active:not(.is-disabled) {
+  background: var(--st-color-primary-active);
+}
+
+.st-button--success {
+  background: var(--st-color-success);
+  color: var(--st-color-white);
+}
+
+.st-button--warning {
+  background: var(--st-color-warning);
+  color: var(--st-color-white);
+}
+
+.st-button--danger {
+  background: var(--st-color-danger);
+  color: var(--st-color-white);
+}
+
+.st-button--info {
+  background: var(--st-color-info);
+  color: var(--st-color-white);
+}
+
+.st-button--text {
+  background: transparent;
+  color: var(--st-color-primary);
+  padding-left: var(--st-spacing-sm);
+  padding-right: var(--st-spacing-sm);
+}
+
+.st-button--text:hover:not(.is-disabled) {
+  color: var(--st-color-primary-hover);
+  background: rgba(79, 70, 229, 0.08);
+}
+
+/* 朴素 */
+.st-button.is-plain {
+  background: var(--st-color-white);
+}
+
+.st-button--primary.is-plain {
+  border-color: var(--st-color-primary);
+  color: var(--st-color-primary);
+}
+
+.st-button--primary.is-plain:hover:not(.is-disabled) {
+  background: var(--st-color-primary);
+  color: var(--st-color-white);
+}
+
+.st-button--success.is-plain {
+  border-color: var(--st-color-success);
+  color: var(--st-color-success);
+}
+
+.st-button--success.is-plain:hover:not(.is-disabled) {
+  background: var(--st-color-success);
+  color: var(--st-color-white);
+}
+
+.st-button--warning.is-plain {
+  border-color: var(--st-color-warning);
+  color: var(--st-color-warning);
+}
+
+.st-button--warning.is-plain:hover:not(.is-disabled) {
+  background: var(--st-color-warning);
+  color: var(--st-color-white);
+}
+
+.st-button--danger.is-plain {
+  border-color: var(--st-color-danger);
+  color: var(--st-color-danger);
+}
+
+.st-button--danger.is-plain:hover:not(.is-disabled) {
+  background: var(--st-color-danger);
+  color: var(--st-color-white);
+}
+
+.st-button--info.is-plain {
+  border-color: var(--st-color-info);
+  color: var(--st-color-info);
+}
+
+.st-button--info.is-plain:hover:not(.is-disabled) {
+  background: var(--st-color-info);
+  color: var(--st-color-white);
+}
+
+/* 形状 */
+.st-button.is-round {
+  border-radius: var(--st-border-radius-round);
+}
+
+.st-button.is-circle {
+  border-radius: 50%;
+  padding: 0;
+  width: 2.125em;
+}
+
+/* 状态 */
+.st-button.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* 图标与加载 */
+.st-button__spinner {
+  width: 1em;
+  height: 1em;
+  animation: st-rotate 0.8s linear infinite;
+}
+
+.st-button__icon {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+}
+
+.st-button__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes st-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

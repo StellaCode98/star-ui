@@ -1,0 +1,23 @@
+{
+  "name": "star-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "基于 Vue 3 + TypeScript 的轻量级组件库，配套 VuePress 2 文档站",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm dev:docs",
+    "dev:docs": "pnpm --filter @star-ui/docs dev",
+    "build": "pnpm build:lib && pnpm build:docs",
+    "build:lib": "pnpm --filter @star-ui/components build",
+    "build:docs": "pnpm --filter @star-ui/docs build",
+    "typecheck": "pnpm --filter @star-ui/components typecheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kxl-823/star-ui.git"
+  },
+  "license": "MIT"
+}

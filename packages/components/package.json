@@ -1,0 +1,35 @@
+{
+  "name": "@star-ui/components",
+  "version": "0.1.0",
+  "description": "StarUI 组件库：基于 Vue 3 + TypeScript 的常用组件集合",
+  "type": "module",
+  "main": "./dist/star-ui.umd.cjs",
+  "module": "./dist/star-ui.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/star-ui.es.js",
+      "require": "./dist/star-ui.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vue": "^3.5.0",
+    "vue-tsc": "^2.1.0"
+  }
+}

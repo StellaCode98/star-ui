@@ -1,0 +1,134 @@
+.st-modal {
+  position: fixed;
+  inset: 0;
+}
+
+body.st-modal--locked {
+  overflow: hidden;
+}
+
+.st-modal__mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+}
+
+.st-modal__wrap {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 16px 32px;
+}
+
+.st-modal__dialog {
+  background: var(--st-color-white, #fff);
+  border-radius: 8px;
+  box-shadow: var(--st-shadow-lg, 0 12px 32px rgba(17, 24, 39, 0.16));
+  display: flex;
+  flex-direction: column;
+  max-height: calc(92vh - 8vh);
+  pointer-events: auto;
+}
+
+.st-modal__dialog--small {
+  width: 360px;
+}
+
+.st-modal__dialog--medium {
+  width: 520px;
+}
+
+.st-modal__dialog--large {
+  width: 720px;
+}
+
+.st-modal__dialog--full {
+  width: calc(100vw - 32px);
+  height: calc(100vh - 8vh - 32px);
+  max-height: none;
+}
+
+.st-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--st-color-border, #e5e7eb);
+  flex-shrink: 0;
+}
+
+.st-modal__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--st-color-text, #1f2937);
+}
+
+.st-modal__close {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--st-color-text-secondary, #6b7280);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.st-modal__close:hover {
+  color: var(--st-color-text, #1f2937);
+  background: var(--st-color-fill, #f3f4f6);
+}
+
+.st-modal__body {
+  padding: 20px;
+  overflow-y: auto;
+  color: var(--st-color-text, #1f2937);
+  font-size: 14px;
+}
+
+.st-modal__footer {
+  display: flex;
+  gap: var(--st-spacing-sm, 8px);
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--st-color-border, #e5e7eb);
+  flex-shrink: 0;
+}
+
+.st-modal__footer.is-right {
+  justify-content: flex-end;
+}
+
+.st-modal__footer.is-center {
+  justify-content: center;
+}
+
+.st-modal__footer.is-left {
+  justify-content: flex-start;
+}
+
+/* 过渡 */
+.st-modal-enter-active,
+.st-modal-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.st-modal-enter-active .st-modal__dialog,
+.st-modal-leave-active .st-modal__dialog {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.st-modal-enter-from,
+.st-modal-leave-to {
+  opacity: 0;
+}
+
+.st-modal-enter-from .st-modal__dialog,
+.st-modal-leave-to .st-modal__dialog {
+  transform: translateY(-16px) scale(0.98);
+  opacity: 0;
+}
