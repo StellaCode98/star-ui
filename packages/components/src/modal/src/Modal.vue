@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import { useModalVisible } from './useModalVisible'
 import { modalProps } from './props'
 import '../../../styles/modal.css'
@@ -16,6 +17,14 @@ const emit = defineEmits<{
 
 const { close } = useModalVisible(props, emit)
 
+// SSR 与客户端水合期间 Teleport 的目标锚点尚未就绪，直接传送会导致
+// 水合不匹配（如 VuePress 文档站直开页面时白屏）。先原位渲染（此时
+// v-model 为 false，内容仅一个注释节点），挂载完成后再启用传送。
+const mounted = ref(false)
+onMounted(() => {
+  mounted.value = true
+})
+
 function onMaskClick(evt: MouseEvent) {
   emit('mask-click', evt)
   if (props.maskClosable) close()
@@ -23,7 +32,7 @@ function onMaskClick(evt: MouseEvent) {
 </script>
 
 <template>
-  <Teleport to="body">
+  <Teleport to="body" :disabled="!mounted">
     <Transition name="st-modal" @after-enter="emit('opened')" @after-leave="emit('closed')">
       <div
         v-if="modelValue"
