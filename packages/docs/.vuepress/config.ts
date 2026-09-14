@@ -5,6 +5,18 @@ import { fileURLToPath } from 'node:url'
 
 const repoUrl = 'https://github.com/StellaCode98/star-ui'
 
+// theme-default rc.31 读取 pageData.headers 渲染侧边栏，但 core rc.31
+// 序列化页面数据时并未包含 headers（上游 main 分支已在 resolvePageData
+// 中补回），导致构建产物运行时抛
+// “Cannot read properties of undefined (reading '0')”。
+// 这里通过 extendsPage 钩子把 headers 写回页面数据，等价于上游修复。
+const pageHeadersPlugin = {
+  name: 'star-ui-page-headers',
+  extendsPage: (page: any) => {
+    page.data.headers = page.headers ?? []
+  },
+}
+
 export default defineUserConfig({
   base: '/star-ui/',
   lang: 'zh-CN',
@@ -27,6 +39,7 @@ export default defineUserConfig({
     },
   }),
   head: [['link', { rel: 'icon', href: '/star-ui/logo.svg' }]],
+  plugins: [pageHeadersPlugin],
   theme: defaultTheme({
     repo: 'StellaCode98/star-ui',
     repoLabel: 'GitHub',

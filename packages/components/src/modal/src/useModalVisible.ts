@@ -19,6 +19,9 @@ export type ModalVisibleEmits = {
 export function useModalVisible(props: ModalVisibleProps, emit: ModalVisibleEmits) {
   let scrollLockCount = 0
 
+  // SSR（如 VuePress 文档站构建）没有 document，DOM 副作用只应在浏览器执行
+  const inBrowser = typeof document !== 'undefined'
+
   function open() {
     if (props.modelValue) return
     emit('update:modelValue', true)
@@ -38,17 +41,17 @@ export function useModalVisible(props: ModalVisibleProps, emit: ModalVisibleEmit
     (visible) => {
       if (visible) {
         emit('open')
-        if (props.lockScroll && scrollLockCount++ === 0) {
+        if (inBrowser && props.lockScroll && scrollLockCount++ === 0) {
           document.body.classList.add('st-modal--locked')
         }
-        if (props.escClosable) document.addEventListener('keydown', onKeydown)
+        if (inBrowser && props.escClosable) document.addEventListener('keydown', onKeydown)
       } else {
         emit('close')
-        if (props.lockScroll && --scrollLockCount <= 0) {
+        if (inBrowser && props.lockScroll && --scrollLockCount <= 0) {
           scrollLockCount = 0
           document.body.classList.remove('st-modal--locked')
         }
-        document.removeEventListener('keydown', onKeydown)
+        if (inBrowser) document.removeEventListener('keydown', onKeydown)
       }
     },
     { immediate: true },
@@ -56,6 +59,7 @@ export function useModalVisible(props: ModalVisibleProps, emit: ModalVisibleEmit
 
   if (getCurrentInstance()) {
     onBeforeUnmount(() => {
+      if (!inBrowser) return
       if (props.lockScroll && scrollLockCount > 0) document.body.classList.remove('st-modal--locked')
       document.removeEventListener('keydown', onKeydown)
     })
