@@ -19,7 +19,7 @@ const fullModal = ref(false)
     <DemoBox title="不同尺寸" description="small / medium（默认）/ large / full">
       <StButton size="small" @click="noMaskClose = true">小型</StButton>
       <StButton @click="customFooter = true">中型</StButton>
-      <StButton type="success" @click="full = true">全屏</StButton>
+      <StButton type="success" @click="fullModal = true">全屏</StButton>
     </DemoBox>
 
     <DemoBox title="禁止遮罩关闭" description="mask-closable 设为 false 后只能通过按钮关闭">
