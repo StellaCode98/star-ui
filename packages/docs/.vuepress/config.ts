@@ -3,7 +3,7 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { fileURLToPath } from 'node:url'
 
-const repoUrl = 'https://github.com/kxl-823/star-ui'
+const repoUrl = 'https://github.com/StellaCode98/star-ui'
 
 export default defineUserConfig({
   base: '/star-ui/',
@@ -28,7 +28,7 @@ export default defineUserConfig({
   }),
   head: [['link', { rel: 'icon', href: '/star-ui/logo.svg' }]],
   theme: defaultTheme({
-    repo: 'kxl-823/star-ui',
+    repo: 'StellaCode98/star-ui',
     repoLabel: 'GitHub',
     docsDir: 'packages/docs',
     docsBranch: 'main',

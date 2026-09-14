@@ -4,12 +4,12 @@
 
 **基于 Vue 3 + TypeScript 的轻量级组件库**
 
-[![Docs](https://img.shields.io/badge/docs-vuepress2-4f46e5.svg)](https://kxl-823.github.io/star-ui/)
+[![Docs](https://img.shields.io/badge/docs-vuepress2-4f46e5.svg)](https://StellaCode98.github.io/star-ui/)
 [![Vue](https://img.shields.io/badge/vue-3.5-42b883.svg)](https://vuejs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-[文档站](https://kxl-823.github.io/star-ui/) · [组件示例](https://kxl-823.github.io/star-ui/components/button.html)
+[文档站](https://StellaCode98.github.io/star-ui/) · [组件示例](https://StellaCode98.github.io/star-ui/components/button.html)
 
 </div>
 
@@ -21,12 +21,12 @@ StarUI 是一套基于 Vue 3 组合式 API 与 TypeScript 的组件库，提供�
 
 | 组件 | 状态 | 文档 |
 | --- | --- | --- |
-| Button 按钮 | ✅ 可用 | [文档](https://kxl-823.github.io/star-ui/components/button.html) |
-| Modal 弹框 | ✅ 可用 | [文档](https://kxl-823.github.io/star-ui/components/modal.html) |
-| Table 表格 | ✅ 可用 | [文档](https://kxl-823.github.io/star-ui/components/table.html) |
+| Button 按钮 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/button.html) |
+| Modal 弹框 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/modal.html) |
+| Table 表格 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/table.html) |
 | Input / Select / Badge … | 🚧 规划中 | — |
 
-> 更多组件持续补充中，欢迎提 [Issue](https://github.com/kxl-823/star-ui/issues) 需求。
+> 更多组件持续补充中，欢迎提 [Issue](https://github.com/StellaCode98/star-ui/issues) 需求。
 
 ## 快速开始
 
@@ -79,7 +79,7 @@ star-ui/
 
 ## 贡献
 
-新增组件流程见[文档站指南](https://kxl-823.github.io/star-ui/guide/getting-started.html#新增组件流程)。
+新增组件流程见[文档站指南](https://StellaCode98.github.io/star-ui/guide/getting-started.html#新增组件流程)。
 
 ## License
 

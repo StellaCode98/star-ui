@@ -8,7 +8,7 @@ actions:
     link: /guide/
     type: primary
   - text: GitHub
-    link: https://github.com/kxl-823/star-ui
+    link: https://github.com/StellaCode98/star-ui
     type: secondary
 features:
   - title: Vue 3 组合式 API
@@ -17,5 +17,5 @@ features:
     details: 树摇友好的 ES 模块产物，也支持全量注册，兼顾包体积与易用性。
   - title: 主题变量
     details: 基于 CSS 变量的主题体系，覆盖颜色、圆角、间距，轻松定制品牌风格。
-footer: MIT Licensed | Copyright © 2026-present kxl-823
+footer: MIT Licensed | Copyright © 2026-present StellaCode98
 ---

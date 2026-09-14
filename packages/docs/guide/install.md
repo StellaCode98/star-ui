@@ -30,7 +30,7 @@ import '@star-ui/components/dist/style.css'
 
 ```bash
 # 克隆仓库
-git clone https://github.com/kxl-823/star-ui.git
+git clone https://github.com/StellaCode98/star-ui.git
 cd star-ui
 
 # 安装依赖
