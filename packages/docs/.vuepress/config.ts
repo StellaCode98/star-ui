@@ -3,8 +3,6 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { fileURLToPath } from 'node:url'
 
-const repoUrl = 'https://github.com/StellaCode98/star-ui'
-
 // theme-default rc.31 读取 pageData.headers 渲染侧边栏，但 core rc.31
 // 序列化页面数据时并未包含 headers（上游 main 分支已在 resolvePageData
 // 中补回），导致构建产物运行时抛
@@ -49,13 +47,29 @@ export default defineUserConfig({
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: true,
     contributors: false,
+    // repo 会让主题在导航栏末尾自动生成一个 GitHub 链接，
+    // 同时驱动「在 GitHub 上编辑此页」，不要在 navbar 里重复手写
     navbar: [
-      { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       { text: '组件', link: '/components/button.html' },
-      { text: 'GitHub', link: repoUrl },
+      { text: '前端知识点', link: '/notes/' },
     ],
     sidebar: {
+      '/notes/': [
+        {
+          text: '前端知识点',
+          children: [
+                '/notes/README.md',
+                '/notes/html.md',
+                '/notes/css.md',
+                '/notes/javascript.md',
+                '/notes/typescript.md',
+                '/notes/vue.md',
+            '/notes/browser-network.md',
+            '/notes/engineering.md',
+          ],
+        },
+      ],
       '/guide/': [
         {
           text: '开始',
