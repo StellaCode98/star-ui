@@ -19,5 +19,8 @@
     "type": "git",
     "url": "git+https://github.com/StellaCode98/star-ui.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.21.3"
+  }
 }

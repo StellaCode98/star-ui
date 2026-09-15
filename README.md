@@ -24,6 +24,7 @@ StarUI 是一套基于 Vue 3 组合式 API 与 TypeScript 的组件库，提供�
 | Button 按钮 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/button.html) |
 | Modal 弹框 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/modal.html) |
 | Table 表格 | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/table.html) |
+| Chart 图表（基于 ECharts） | ✅ 可用 | [文档](https://StellaCode98.github.io/star-ui/components/chart.html) |
 | Input / Select / Badge … | 🚧 规划中 | — |
 
 > 更多组件持续补充中，欢迎提 [Issue](https://github.com/StellaCode98/star-ui/issues) 需求。

@@ -26,6 +26,14 @@ yarn add @star-ui/components
 import '@star-ui/components/dist/style.css'
 ```
 
+## 图表组件（可选）
+
+`StChart` 基于 ECharts，作为 peerDependency 按需安装：
+
+```bash
+pnpm add echarts
+```
+
 ## 本地开发本仓库
 
 ```bash
@@ -56,6 +64,7 @@ star-ui/
 │  │  │  ├─ button/      # Button 组件
 │  │  │  ├─ modal/       # Modal 组件
 │  │  │  ├─ table/       # Table 组件
+│  │  │  ├─ chart/       # Chart 组件（ECharts 封装）
 │  │  │  └─ index.ts     # 库入口
 │  │  └─ styles/         # 组件样式（CSS 变量主题）
 │  └─ docs/              # VuePress 2 文档站

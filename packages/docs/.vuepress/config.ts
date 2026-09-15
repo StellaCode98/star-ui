@@ -75,6 +75,10 @@ export default defineUserConfig({
             '/components/table.md',
           ],
         },
+        {
+          text: '数据展示',
+          children: ['/components/chart.md'],
+        },
       ],
     },
   }),

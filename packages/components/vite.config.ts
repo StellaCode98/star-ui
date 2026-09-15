@@ -11,12 +11,13 @@ export default defineConfig({
       fileName: (format) => (format === 'es' ? 'star-ui.es.js' : 'star-ui.umd.cjs'),
     },
     rollupOptions: {
-      // Vue 作为 peerDependency，构建时 external，不打入产物
-      external: ['vue'],
+      // Vue 与 echarts 作为 peerDependency，构建时 external，不打入产物
+      external: ['vue', 'echarts'],
       output: {
         exports: 'named',
         globals: {
           vue: 'Vue',
+          echarts: 'echarts',
         },
         // 单入口场景下将所有组件样式合并为一个 style.css
         assetFileNames: (info) =>
